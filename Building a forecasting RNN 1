@@ -1,0 +1,11 @@
+class Net(nn.Module):
+    def __init__(self):
+        super().__init__()
+        # Define RNN layer
+        self.rnn = nn.RNN(
+            input_size=1,  # Check if this matches your input features
+            hidden_size=32,  # Ensure this is the desired hidden size
+            num_layers=2,  # Verify the number of layers you need
+            batch_first=True,  # This should be True if your input shape is (batch, seq, feature)
+        )
+        self.fc = nn.Linear(32, 1)
