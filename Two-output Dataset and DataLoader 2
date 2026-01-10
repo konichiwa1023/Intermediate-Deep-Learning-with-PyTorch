@@ -1,0 +1,9 @@
+# Print the sample at index 100
+print(samples[100])
+
+# Create dataset_train
+dataset_train = OmniglotDataset(
+      transform=transforms.Compose([
+    ]),
+  samples=samples,
+)
