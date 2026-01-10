@@ -1,0 +1,5 @@
+class OmniglotDataset(Dataset):
+    def __init__(self, transform, samples):
+        # You need to assign transform and samples to class attributes here
+        self.transform = transform
+        self.samples = samples
