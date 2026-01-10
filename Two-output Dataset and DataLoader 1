@@ -1,0 +1,2 @@
+# Print the sample at index 100
+print(samples[100])
