@@ -1,0 +1,14 @@
+class Net(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.image_layer = nn.Sequential(
+            nn.Conv2d(1, 16, kernel_size=3, padding=1),
+            nn.MaxPool2d(kernel_size=2),
+            nn.ELU(),
+            nn.Flatten(),
+            nn.Linear(16 * 32 * 32, 128)
+        )
+        
+        # Classifiers for the two outputs
+        self.classifier_alpha = nn.Linear(128, 30)   # Predict alphabet (30 classes)
+        self.classifier_char = nn.Linear(128, 964)   # Predict character (964 classes)
