@@ -1,0 +1,4 @@
+def evaluate_model(model):
+    # Define accuracy metrics
+    acc_alpha = Accuracy(task="multiclass", num_classes=30)
+    acc_char = Accuracy(task="multiclass", num_classes=964)
