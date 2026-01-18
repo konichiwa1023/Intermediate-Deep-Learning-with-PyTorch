@@ -1,0 +1,14 @@
+# Convert bbox into tensors
+bbox_tensor = torch.tensor(bbox)
+# Add a new batch dimension
+bbox_tensor = bbox_tensor.unsqueeze(0)
+
+# Resize image and transform tensor
+transform = transforms.Compose([
+  transforms.Resize(224),
+  transforms.PILToTensor()
+])
+
+# Apply transform to image
+image_tensor = transform(image)
+print(image_tensor)
