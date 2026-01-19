@@ -1,0 +1,9 @@
+# Load pretrained weights
+vgg_model = vgg16(weights=VGG16_Weights.DEFAULT)
+
+# Extract the input dimension
+input_dim = nn.Sequential(*list(vgg_model.classifier.children()))[0].in_features
+# Create a backbone with convolutional layers
+backbone = nn.Sequential(*list(vgg_model.features.children()))
+# Print the backbone model
+print(backbone)
