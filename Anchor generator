@@ -1,0 +1,11 @@
+# Import AnchorGenerator
+from torchvision.models.detection.rpn import AnchorGenerator
+
+# Configure anchor size
+anchor_sizes = ((32, 64, 128),)
+
+# Configure aspect ratio
+aspect_ratios = ((0.5, 1.0, 2.0),)
+
+# Instantiate AnchorGenerator
+aspect_ratios = ((0.5, 1.0, 2.0),)
