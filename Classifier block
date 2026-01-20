@@ -1,0 +1,11 @@
+# Create a variable with the number of classes
+num_classes = 2
+    
+# Create a sequential block
+classifier = nn.Sequential(
+	# Create a linear layer with input features
+	nn.Linear(input_dim, 512),
+	nn.ReLU(),
+	# Add the output dimension to the classifier
+	nn.Linear(512, num_classes),
+)
