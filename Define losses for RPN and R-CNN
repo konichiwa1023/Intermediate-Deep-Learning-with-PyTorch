@@ -1,0 +1,11 @@
+# Implement the RPN classification loss function
+rpn_cls_criterion = nn.BCEWithLogitsLoss()
+
+# Implement the RPN regression loss function
+rpn_reg_criterion = nn.MSELoss()
+
+# Implement the R-CNN classification Loss function
+rcnn_cls_criterion = nn.CrossEntropyLoss()
+
+# Implement the R-CNN regression loss function
+rcnn_reg_criterion = nn.MSELoss()
