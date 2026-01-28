@@ -1,0 +1,15 @@
+class DCDiscriminator(nn.Module):
+    def __init__(self, kernel_size=4, stride=2):
+        super(DCDiscriminator, self).__init__()
+        self.disc = nn.Sequential(
+          	# Add first discriminator block
+            dc_disc_block(3, 512, kernel_size, stride),
+            dc_disc_block(512, 1024, kernel_size, stride),
+          	# Add a convolution
+            nn.Conv2d(1024, 1, kernel_size, stride=stride),
+        )
+
+    def forward(self, x):
+        # Pass input through sequential block
+        x = ____
+        return x.view(len(x), -1)
