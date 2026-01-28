@@ -1,0 +1,11 @@
+def gen_loss(gen, disc, criterion, num_images, z_dim):
+    # Define random noise
+    noise = ____(num_images, z_dim)
+    # Generate fake image
+    fake = ____
+    # Get discriminator's prediction on the fake image
+    disc_pred = ____
+    # Compute generator loss
+    criterion = nn.BCEWithLogitsLoss()
+    gen_loss = ____(____, ____)
+    return gen_loss
