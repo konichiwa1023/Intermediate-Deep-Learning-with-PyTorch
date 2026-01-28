@@ -1,0 +1,16 @@
+num_images_to_generate = 5
+# Create random noise tensor
+noise = torch.randn(num_images_to_generate, 16)
+
+# Generate images
+with torch.no_grad():
+    fake = gen(noise)
+print(f"Generated tensor shape: {fake.shape}")
+    
+for i in range(num_images_to_generate):
+    # Slice fake to select i-th image
+    image_tensor = fake[i, :, :, :]
+    # Permute the image dimensions
+    image_tensor_permuted = image_tensor.permute(1, 2, 0)
+    plt.imshow(image_tensor_permuted)
+    plt.show()
